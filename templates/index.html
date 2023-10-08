@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="{{ url_for('static', path='/style.css') }}" rel="stylesheet">
+
+  <title>Convertor</title>
+</head>
+
+<body>
+  <div class="main"></div>
+  <div class="mt-n5">
+    <div class="container">
+
+      <h1>
+        <em>C</em>
+        <em class="planet left">O</em>
+        <em>N</em>
+        <em>V</em>
+        <em>E</em>
+        <em>R</em>
+        <em>T</em>
+        <em class="planet right">O</em>
+        <em>R</em>
+      </h1>
+
+      <div class="form-inline">
+        <form action="/convert" method="post">
+          <input type="text" id="form1" name="form1" placeholder="EMOUNT" class="form-control mr-2">
+
+          <input type="text" id="form2" name="form2" placeholder="FROM" class="form-control mr-2">
+
+          <input type="text" id="form3" name="form3" placeholder="TO" class="form-control mr-2">
+
+          <div class="d-flex justify-content-center mt-3">
+            <button type="submit" class="btn btn-primary">Convert</button>
+          </div>
+
+        </form>
+
+      </div>
+
+
+      <div class="text-center mt-5 fs-1">
+        <p>{{ text1 }}</p>
+      </div>
+
+
+    </div>
+</body>
+
+</html>
